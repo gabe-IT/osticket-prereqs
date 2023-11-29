@@ -17,11 +17,52 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 
 <h2>List of Prerequisites</h2>
 
-- Item 1
-- Item 2
-- Item 3
-- Item 4
-- Item 5
+
+<h2>osTicket Lab Summary</h2>
+<ol>
+  <li><strong>Azure VM Setup:</strong>
+    <ul>
+      <li>Create Resource Group and Windows 10 VM.</li>
+    </ul>
+  </li>
+  <li><strong>IIS Installation:</strong>
+    <ul>
+      <li>Enable IIS with CGI, HTTP Features.</li>
+    </ul>
+  </li>
+  <li><strong>PHP & MySQL Setup:</strong>
+    <ul>
+      <li>Install PHP Manager, Rewrite Module, PHP 7.3.8, MySQL 5.5.62.</li>
+    </ul>
+  </li>
+  <li><strong>osTicket Installation:</strong>
+    <ul>
+      <li>Install osTicket, configure IIS, PHP extensions.</li>
+    </ul>
+  </li>
+  <li><strong>Database Configuration:</strong>
+    <ul>
+      <li>Setup with HeidiSQL.</li>
+    </ul>
+  </li>
+  <li><strong>Post-Installation:</strong>
+    <ul>
+      <li>Configure roles, departments, teams, SLAs, help topics.</li>
+    </ul>
+  </li>
+  <li><strong>Ticket Lifecycle:</strong>
+    <ul>
+      <li>Practice ticket creation, triaging, solving.</li>
+    </ul>
+  </li>
+  <li><strong>Final Steps:</strong>
+    <ul>
+      <li>Cleanup, finalize permissions, note URLs.</li>
+    </ul>
+  </li>
+</ol>
+
+
 
 <h2>Installation Steps</h2>
 
