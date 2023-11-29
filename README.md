@@ -43,23 +43,41 @@
 </ol>
 
 <h2>Installation Steps</h2>
-<!-- Repeat the following structure for each installation step -->
-<h3>Install / Enable IIS in Windows WITH CGI and Common HTTP Features</h3>
-<p>
-    <!-- Instructions for each step -->
-</p>
-<!-- Image placeholders -->
-<img src="path_to_your_image" alt="Description of Image">
-<!-- Repeat as necessary -->
 
-<!-- Continue with other steps similarly -->
-
-<h3>Clean Up</h3>
+<h3>1) Create a Virtual Machine in Azure</h3>
 <p>
-    <!-- Instructions for clean up -->
+    <!-- Add your description here for creating a VM in Azure -->
+    [Your descriptive text for creating a VM in Azure goes here...]
 </p>
 
-<h3 align="right">Next Tutorial - <a href="https://github.com/ColtonTrauCC/post-install-config">osTicket - Post-Install Configuration</a></h3>
+<h3>2) Install / Enable IIS in Windows WITH CGI and Common HTTP Features</h3>
+<p>
+    <!-- Add your description here for installing and enabling IIS with CGI and HTTP Features -->
+    [Your descriptive text for installing and enabling IIS goes here...]
+</p>
 
+<h3>3) Download the Installation Files and Set Them Up</h3>
+<p>
+    <!-- Add your description here for downloading and setting up the installation files -->
+    [Your descriptive text for downloading and setting up the installation files goes here...]
+</p>
+
+<h3>4) Set Up PHP and IIS</h3>
+<p>
+    <!-- Add your description here for setting up PHP and IIS -->
+    [Your descriptive text for setting up PHP and IIS goes here...]
+</p>
+
+<h3>5) Install osTicket</h3>
+<p>
+    <!-- Add your description here for installing osTicket -->
+    [Your descriptive text for installing osTicket goes here...]
+</p>
+
+<h3>6) Clean Up</h3>
+<p>
+    <!-- Add your description here for the clean-up process -->
+    [Your descriptive text for the clean-up process goes here...]
+</p>
 </body>
 </html>
