@@ -1,101 +1,68 @@
 <p align="center">
 <img src="https://i.imgur.com/Clzj7Xs.png" alt="osTicket logo"/>
+</p><!DOCTYPE html>
+<html>
+<head>
+    <title>osTicket - Prerequisites and Installation</title>
+</head>
+<body>
+
+<p align="center">
+    <img src="https://i.imgur.com/Clzj7Xs.png" alt="osTicket logo"/>
 </p>
 
-<h1>osTicket - Prerequisites and Installation</h1>
-This tutorial outlines the prerequisites and installation of the open-source help desk ticketing system osTicket.<br />
+<h1 align="center">osTicket - Prerequisites and Installation</h1>
+<p>This tutorial outlines the prerequisites and installation of the open-source help desk ticketing system osTicket.<br /></p>
 
 <h2>Environments and Technologies Used</h2>
+<ul>
+    <li>Microsoft Azure (Virtual Machines/Compute)</li>
+    <li>Remote Desktop</li>
+    <li>Internet Information Services (IIS)</li>
+</ul>
 
-- Microsoft Azure (Virtual Machines/Compute)
-- Remote Desktop
-- Internet Information Services (IIS)
-
-<h2>Operating Systems Used </h2>
-
-- Windows 10</b> (21H2)
+<h2>Operating Systems Used</h2>
+<ul>
+    <li>Windows 10 (21H2)</li>
+</ul>
 
 <h2>List of Prerequisites</h2>
-
 <ol>
-  <li><strong>Azure VM Setup:</strong>
+    <li>Set up an Azure Virtual Machine (VM) environment (Windows 10 4 vCPUs Recommended)</li>
+    <li><a href="https://drive.google.com/drive/folders/1APMfNyfNzcxZC6EzdaNfdZsUwxWYChf6">osTicket Installation Files</a> (Download these files on your Azure Virtual Machine)</li>
+    <li>Enable IIS in I.S.S.</li>
+    <li>Install Web Platform Installer</li>
+    <li>Install MySQL and set up username and password</li>
     <ul>
-      <li>Create Resource Group and Windows 10 VM.</li>
+        <li>For this tutorial, we will set up our username and password as such:</li>
+        <ul>
+            <li>username: root</li>
+            <li>password: Password1</li>
+        </ul>
     </ul>
-  </li>
-  <li><strong>IIS Installation:</strong>
-    <ul>
-      <li>Enable IIS with CGI, HTTP Features.</li>
-    </ul>
-  </li>
-  <li><strong>PHP & MySQL Setup:</strong>
-    <ul>
-      <li>Install PHP Manager, Rewrite Module, PHP 7.3.8, MySQL 5.5.62.</li>
-    </ul>
-  </li>
-  <li><strong>osTicket Installation:</strong>
-    <ul>
-      <li>Install osTicket, configure IIS, PHP extensions.</li>
-    </ul>
-  </li>
-  <li><strong>Database Configuration:</strong>
-    <ul>
-      <li>Setup with HeidiSQL.</li>
-    </ul>
-  </li>
-  <li><strong>Post-Installation:</strong>
-    <ul>
-      <li>Configure roles, departments, teams, SLAs, help topics.</li>
-    </ul>
-  </li>
-  <li><strong>Ticket Lifecycle:</strong>
-    <ul>
-      <li>Practice ticket creation, triaging, solving.</li>
-    </ul>
-  </li>
-  <li><strong>Final Steps:</strong>
-    <ul>
-      <li>Cleanup, finalize permissions, note URLs.</li>
-    </ul>
-  </li>
+    <li>Install C++ Redistributable</li>
+    <li>Configure permissions and install osTicket</li>
+    <li>(OPTIONAL) Have a notepad on standby to keep track of usernames and passwords for this tutorial</li>
 </ol>
 
-
-
 <h2>Installation Steps</h2>
-
+<!-- Repeat the following structure for each installation step -->
 <h3>Install / Enable IIS in Windows WITH CGI and Common HTTP Features</h3>
-
 <p>
-  <ul>
-    <li>In your VM, go to the <b>Control Panel</b> and head to <b>Programs</b>. </li>
-    <li>Under <b>Program and Features</b> click on <b>Turn Windows features on or off</b></li>
-    <li>Navigate the list and check the box for <b>Internet Information Services</b></li>
-    <li>Expand the list for <b>Internet Information Services</b>, navigate to <b>World Wide Web Services</b> then expand that to find <b>Application Development Features</b>, expand that and check the box for <b>CGI</b>.</li>
-    <li>Before closing, make sure the boxes under <b>Common HTTP Features</b> in World Wide Web Services are checked.</li>
-      <ul>
-        <li><b>Check these boxes in Turn Windows Features on or off</b></li>
-        <li><img src="https://github.com/ColtonTrauCC/osticket-prereqs/assets/147654000/e770403c-5def-4c58-a2ad-24b61a859078" height="50%" width="50%" alt="Disk Sanitization Steps"/></li>
-      </ul>
-    <li>To confirm everything is set accordingly, go to your browser in your VM and type in <b>127.0.0.1</b>, it should load the page to Internet Information Services</li>
-      <ul>
-        <li><img src="https://github.com/ColtonTrauCC/osticket-prereqs/assets/147654000/b6fdbb5f-73c6-4aaf-ac8c-3e9690303d7b" height="50%" width="50%" alt="Disk Sanitization Steps"/></li>
-      </ul>
-  </ul>
+    <!-- Instructions for each step -->
+</p>
+<!-- Image placeholders -->
+<img src="path_to_your_image" alt="Description of Image">
+<!-- Repeat as necessary -->
+
+<!-- Continue with other steps similarly -->
+
+<h3>Clean Up</h3>
+<p>
+    <!-- Instructions for clean up -->
 </p>
 
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
+<h3 align="right">Next Tutorial - <a href="https://github.com/ColtonTrauCC/post-install-config">osTicket - Post-Install Configuration</a></h3>
 
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
+</body>
+</html>
