@@ -1,10 +1,7 @@
-<p align="center">
-<img src="https://i.imgur.com/Clzj7Xs.png" alt="osTicket logo"/>
+
 </p><!DOCTYPE html>
 <html>
-<head>
-    <title>osTicket - Prerequisites and Installation</title>
-</head>
+
 <body>
 
 <p align="center">
