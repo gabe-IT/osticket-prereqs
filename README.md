@@ -1,4 +1,4 @@
-![image](https://github.com/gabe-IT/osticket-prereqs/assets/148400020/853b5d9d-8013-4815-a0ef-324af88f4785)
+
 </p><!DOCTYPE html>
 <html>
 
