@@ -8,76 +8,85 @@
     <img src="https://i.imgur.com/Clzj7Xs.png" alt="osTicket logo"/>
 </p>
 
-<h1 align="center">osTicket - Prerequisites and Installation</h1>
-<p>This tutorial outlines the prerequisites and installation of the open-source help desk ticketing system osTicket.<br /></p>
+# Installing osTicket on Azure Virtual Machine
 
-<h2>Environments and Technologies Used</h2>
-<ul>
-    <li>Microsoft Azure (Virtual Machines/Compute)</li>
-    <li>Remote Desktop</li>
-    <li>Internet Information Services (IIS)</li>
-</ul>
+This lab guides you through setting up osTicket, an open-source support ticket system, on a Windows 10 Virtual Machine in Microsoft Azure.
 
-<h2>Operating Systems Used</h2>
-<ul>
-    <li>Windows 10 (21H2)</li>
-</ul>
+## Part 1: Create Virtual Machine in Azure
 
-<h2>List of Prerequisites</h2>
-<ol>
-    <li>Set up an Azure Virtual Machine (VM) environment (Windows 10 4 vCPUs Recommended)</li>
-    <li><a href="https://drive.google.com/drive/folders/1APMfNyfNzcxZC6EzdaNfdZsUwxWYChf6">osTicket Installation Files</a> (Download these files on your Azure Virtual Machine)</li>
-    <li>Enable IIS in I.S.S.</li>
-    <li>Install Web Platform Installer</li>
-    <li>Install MySQL and set up username and password</li>
-    <ul>
-        <li>For this tutorial, we will set up our username and password as such:</li>
-        <ul>
-            <li>username: root</li>
-            <li>password: Password1</li>
-        </ul>
-    </ul>
-    <li>Install C++ Redistributable</li>
-    <li>Configure permissions and install osTicket</li>
-    <li>(OPTIONAL) Have a notepad on standby to keep track of usernames and passwords for this tutorial</li>
-</ol>
+For detailed steps on creating a virtual machine in Azure, refer to the [Azure VM Creation Lab](https://github.com/gabe-IT/azure-vm).
 
-<h2>Installation Steps</h2>
+### Summary of Steps:
+1. Create a **Resource Group** in Azure.
+2. Create a **Windows 10 Virtual Machine (VM)** with 2-4 virtual CPUs.
+3. Configure a **new Virtual Network (Vnet)** for the VM.
 
-<h3>1) Create a Virtual Machine in Azure</h3>
-<p>
-    <!-- Add your description here for creating a VM in Azure -->
-    [Your descriptive text for creating a VM in Azure goes here...]
-</p>
+## Part 2: Installation of osTicket
 
-<h3>2) Install / Enable IIS in Windows WITH CGI and Common HTTP Features</h3>
-<p>
-    <!-- Add your description here for installing and enabling IIS with CGI and HTTP Features -->
-    [Your descriptive text for installing and enabling IIS goes here...]
-</p>
+### Prerequisites
+- Download the osTicket Installation Files from [here](https://drive.google.com/drive/u/1/folders/1APMfNyfNzcxZC6EzdaNfdZsUwxWYChf6).
 
-<h3>3) Download the Installation Files and Set Them Up</h3>
-<p>
-    <!-- Add your description here for downloading and setting up the installation files -->
-    [Your descriptive text for downloading and setting up the installation files goes here...]
-</p>
+### Setup Steps
 
-<h3>4) Set Up PHP and IIS</h3>
-<p>
-    <!-- Add your description here for setting up PHP and IIS -->
-    [Your descriptive text for setting up PHP and IIS goes here...]
-</p>
+1. **Configure Virtual Machine:**
+   - Name: `Vm-osticket`
+   - Username: `labuser` (or your choice)
+   - Password: `osTicketPassword1!` (or your choice)
 
-<h3>5) Install osTicket</h3>
-<p>
-    <!-- Add your description here for installing osTicket -->
-    [Your descriptive text for installing osTicket goes here...]
-</p>
+2. **Install and Enable IIS in Windows:**
+   - Include CGI, Common HTTP Features, and IIS Management Console.
 
-<h3>6) Clean Up</h3>
-<p>
-    <!-- Add your description here for the clean-up process -->
-    [Your descriptive text for the clean-up process goes here...]
-</p>
-</body>
-</html>
+3. **Install PHP Manager for IIS:**
+   - Use `PHPManagerForIIS_V1.5.0.msi` from the Installation Files.
+
+4. **Install Rewrite Module:**
+   - Use `rewrite_amd64_en-US.msi` from the Installation Files.
+
+5. **Setup PHP:**
+   - Create the directory `C:\PHP`.
+   - Download and unzip PHP 7.3.8 into `C:\PHP`.
+
+6. **Install VC_redist.x86.exe:**
+   - Available in the Installation Files.
+
+7. **Install MySQL 5.5.62:**
+   - Use `mysql-5.5.62-win32.msi` from the Installation Files.
+   - Post-install, choose Typical Setup and Standard Configuration.
+   - Set MySQL password to `Password1`.
+
+8. **Configure IIS:**
+   - Open IIS as an Admin.
+   - Register PHP within IIS.
+   - Reload IIS by stopping and starting the server.
+
+9. **Install osTicket v1.15.8:**
+   - Download from the Installation Files.
+   - Extract and copy the “upload” folder to `c:\inetpub\wwwroot`.
+   - Rename “upload” to “osTicket”.
+   - Reload IIS.
+
+10. **Configure osTicket in IIS:**
+    - Go to sites -> Default -> osTicket.
+    - Browse `*:80` to view the osTicket setup page.
+    - Enable PHP extensions: `php_imap.dll`, `php_intl.dll`, `php_opcache.dll`.
+
+11. **Configure `ost-config.php`:**
+    - Rename `ost-sampleconfig.php` to `ost-config.php`.
+    - Set appropriate permissions for `ost-config.php`.
+
+12. **Database Setup:**
+    - Install HeidiSQL.
+    - Create a new session with `root/Password1`.
+    - Create a MySQL database named “osTicket”.
+
+13. **Finalize osTicket Setup:**
+    - Complete the setup in the browser with the MySQL database details.
+    - Click “Install Now!” to finalize.
+
+14. **Access osTicket:**
+    - Help Desk Login Page: `http://localhost/osTicket/scp/login.php`
+    - End Users URL: `http://localhost/osTicket/`
+
+15. **Post-Installation Cleanup:**
+    - Delete `C:\inetpub\wwwroot\osTicket\setup`.
+    - Set `ost-config.php` permissions to “Read” only.
