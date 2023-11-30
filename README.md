@@ -77,6 +77,8 @@ For detailed steps on creating a virtual machine in Azure, refer to the [Azure V
 ### 6. Install VC_redist.x86.exe
 - Locate `VC_redist.x86.exe` in the Installation Files and run it.
 - This installs the necessary Visual C++ Redistributable for running PHP on Windows.
+  ![image](https://github.com/gabe-IT/osticket-prereqs/assets/148400020/b45c3359-ef88-4acb-b15d-cef947609b6f)
+
 
 ### 7. Install MySQL 5.5.62
 - Begin MySQL installation with `mysql-5.5.62-win32.msi`.
