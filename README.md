@@ -1,4 +1,4 @@
-
+![image](https://github.com/gabe-IT/osticket-prereqs/assets/148400020/853b5d9d-8013-4815-a0ef-324af88f4785)
 </p><!DOCTYPE html>
 <html>
 
@@ -34,8 +34,14 @@ For detailed steps on creating a virtual machine in Azure, refer to the [Azure V
    - Password: `osTicketPassword1!` (or your choice)
 
 2. **Install and Enable IIS in Windows:**
-   - Include CGI, Common HTTP Features, and IIS Management Console.
+   - Navigate to Control Panel > Programs > Turn Windows features on or off. 
+     ![image](https://github.com/gabe-IT/osticket-prereqs/assets/148400020/abd89e85-8618-4d8c-99a2-f5bcef83ae72)
+-Include CGI, Common HTTP Features, and IIS Management Console.
+![274989273-e770403c-5def-4c58-a2ad-24b61a859078](https://github.com/gabe-IT/osticket-prereqs/assets/148400020/eb7fb805-812f-4202-86fd-4083bc69981a)
+- To verify that IIS has been successfully installed, open a web browser and type "127.0.0.1" in the search bar and hit enter. You should see something like the image displayed below. If you do not see this, please uninstall and reinstall IIS. 
+![image](https://github.com/gabe-IT/osticket-prereqs/assets/148400020/ca575f86-1478-40d2-b121-9e16233264d5)
 
+    
 3. **Install PHP Manager for IIS:**
    - Use `PHPManagerForIIS_V1.5.0.msi` from the Installation Files.
 
